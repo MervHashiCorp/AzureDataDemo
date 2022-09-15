@@ -1,5 +1,5 @@
 
-#Init
+#Providers
 terraform {
   cloud {
     organization = "MervTrainingOrg"
@@ -13,7 +13,6 @@ terraform {
     }
   }
 
-#Providers
   provider = "azurerm" {
     features {}
   }

@@ -1,22 +1,22 @@
 
 #Providers
 terraform {
-  cloud {
+    cloud {
     organization = "MervTrainingOrg"
     hostname = "app.terraform.io"
-    workspaces = "AzureDataDemo"
-  }
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "3.22.0"
+    workspaces {
+      names = "AzureDataDemo"
     }
   }
 
-  provider = "azurerm" {
-    features {}
-  }
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.22.0"
+    }
+  }  
 }
+
 resource "azurerm_resource_group" "synapse" {
   name = "rg_synapse"
   localocation = var.location  

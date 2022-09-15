@@ -17,6 +17,7 @@ required_providers {
 provider = "azurerm" {
   features {}
 }
+
 resource "azurerm_resource_group" "synapse" {
   name = "rg_synapse"
   localocation = var.location  

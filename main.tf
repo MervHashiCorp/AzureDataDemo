@@ -19,7 +19,7 @@ terraform {
 
 resource "azurerm_resource_group" "synapse" {
   name = "rg_synapse"
-  localocation = var.location  
+  location = var.location  
 }
 resource "azurerm_storage_account" "synapse" {
   name                     = "synapsestorageacc"
